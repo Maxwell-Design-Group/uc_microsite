@@ -12,7 +12,7 @@
 
     <header>
       <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
-        <div class="container py-2">
+        <div class="container-fluid py-2 px-5">
           <a class="navbar-brand" href="/">
             <img src="/svg/header-logo.svg" alt="University of Cincinnati">
           </a>
@@ -21,6 +21,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+              <li class="nav-item px-2">
+                <a class="nav-link" href="/">Home</a>
+              </li>
               <li class="nav-item px-2">
                 <a class="nav-link" href="/about-us.html">About Us</a>
               </li>
@@ -40,7 +43,16 @@
     </header>
 
     <main>
-      <section class="food-image"></section>
+      <section class="d-flex align-items-center food-image">
+        <div class="p-5 text-white w-50">
+          <h1 class="text-start">
+            Our Food Stories
+          </h1>
+          <p class="alt-text text-start">
+            Creating connections through authentic culinary experiences
+          </p>
+        </div>
+      </section>
       <section class="bg-black py-5">
         <h2 style="text-align: center; color: #D1B179">Delivering Next Lives Here Experience</h2>
         <div class="container pt-5">
@@ -148,7 +160,7 @@
     </main>
     
     <footer class="bg-dark">
-      <div class="container bg-dark" data-bs-theme="dark">
+      <div class="container-fluid px-5 bg-dark" data-bs-theme="dark">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
           <div class="col mb-3">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">

@@ -244,6 +244,28 @@ a {
   height: 94vh;
 }
 
+/* Beyond 2024 Hero */
+.beyond-image {
+  background-image: url('/images/future-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 94vh;
+}
+
+/* UC Fade Background */
+.bg-uc-fade {
+  background-image: url('/images/uc-fade.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.gradient-black {
+  background: linear-gradient(180deg, #000 0%, #404040 100%);
+}
+
 /* Buttons */
 .btn-outline-primary {
   color: var(--bs-primary);
