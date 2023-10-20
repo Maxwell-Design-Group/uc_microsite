@@ -75,7 +75,7 @@ header .hamburger-menu {
 body .subtext {
   font-family: 'Gentium Book Plus', serif;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   font-style: italic;
 }
@@ -206,12 +206,6 @@ p {
     z-index: 1;
 }
 
-.subtext {
-    margin: 20px 0 10px 0;
-}
-
-
-
 
 /* Split Section */
 
@@ -233,7 +227,7 @@ p {
 }
 
 .split-text {
-    padding: 0 70px;
+    padding: 70px;
     position: relative;
     color: var(--dark-color);
 }
@@ -323,6 +317,7 @@ footer {
 
 .nav-col-links li {
     margin-bottom: 7px;
+    font-weight: 300;
 }
 
 .nav-col-links li:hover {
@@ -356,13 +351,17 @@ footer {
 /* Cover Sec */
 
 .cover-sec {
-    min-height: 74vh;
+  display: flex;
+    min-height: 69vh;
     background-color: var(--accent-color);
     color: var(--light-text-color);
+    align-items: center;
+    justify-content: center;
 }
 
 .cover-sec .cover-sec-logo {
     position: absolute;
+    left: 0!important;
 }
 
 .cover-sec h1 {
@@ -375,10 +374,7 @@ footer {
 .cover-sec .text-wrap {
     display: flex;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 2;
-    top: 180px;
     align-items: center;
     width: min(90vw, 1400px);
 }
@@ -404,6 +400,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 200px 0 150px 0;
+    background-color: var(--dark-color);
 }
 
 .sec-wrap {
@@ -412,7 +409,7 @@ footer {
 
 .half-line {
     width: min(600px, 50%);
-    background-color: var(--dark-color);
+    background-color: var(--light-text-color);
     height: 1px;
     margin-top: 15px;
 }
@@ -427,19 +424,32 @@ footer {
     display: flex;
     margin-right: 70px;
     margin-bottom: 80px;
-    width: 550px;
+    width: 600px;
 }
 
 
 .member-text {
     margin-left: 40px;
     position: relative;
+    color: var(--light-text-color);
 }
 
 .team-line {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
     background-color: var(--accent-color);
     height: 1px;
     width: 100%;
+}
+
+.team-sec-descriptions {
+  color: var(--accent-color);
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 14px;
+}
+
+.logo {
+  width: 249px;
+  height: 76px;
+  
 }
 
