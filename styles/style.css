@@ -139,6 +139,10 @@ h2 {
   line-height: 1.2;
 }
 
+h4, h6 {
+  line-height: 1;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -150,6 +154,13 @@ a {
   font-size: clamp(2.25rem, 1.2778rem + 3.1111vw, 4rem);
   text-align: center;
   font-style: italic;
+}
+
+.sub-text {
+  font-family: 'Gentium Book Plus', serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--bs-primary);
 }
 
 .h2-line {
@@ -206,6 +217,15 @@ a {
   height: 94vh;
 }
 
+/* About Us Hero */
+.about-image {
+  background-image: url('/images/logo-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 94vh;
+}
+
 /* Buttons */
 .btn-outline-primary {
   color: var(--bs-primary);
@@ -228,6 +248,9 @@ a {
 @media only screen and (max-width: 768px) {
   .split{
     width: 100%;
+  }
+  .jawn {
+    flex-wrap: wrap;
   }
 } 
 
