@@ -226,6 +226,15 @@ a {
   height: 94vh;
 }
 
+/* Food Story Hero */
+.food-image {
+  background-image: url('/images/food-stories-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 94vh;
+}
+
 /* Buttons */
 .btn-outline-primary {
   color: var(--bs-primary);
