@@ -235,6 +235,15 @@ a {
   height: 94vh;
 }
 
+/* Our Initiatives Hero */
+.initiatives-image {
+  background-image: url('/images/initiatives-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 94vh;
+}
+
 /* Buttons */
 .btn-outline-primary {
   color: var(--bs-primary);
