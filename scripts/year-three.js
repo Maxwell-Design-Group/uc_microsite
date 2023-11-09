@@ -73,6 +73,21 @@ const stores = {
         'image': '../images/daap-cafe.jpg',
         'modalClass': 'daap-cafe'
       }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [-84.51497, 39.13119]
+      },
+      'properties': {
+        'header': 'Athlete Dining',
+        'icon': 'mealExchange',
+        'body': 'Not only is the student athlete dining facility is a top-priority among recruits, it is a main priority for us. Our team’s faces are often the most familiar to your athletes and their dining experiences quickly become core memories throughout their legacy as Bearcats. Our modern design, delicious yet nutritional menus and friendly staff will be sure to  win the adoration of all student athletes.',
+        'concepts': ['Lindner Center'],
+        'image': '../images/student-athlete-dining.jpg',
+        'modalClass': 'student-athlete'
+      }
     }
   ]
 };
@@ -187,7 +202,7 @@ function buildLocationList(stores) {
     const popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML(
-        `<h3>${currentFeature.properties.header}</h3><p class="p-2">${popVal}</p>`
+        `<h5>${currentFeature.properties.header}</h5><p class="p-2">${popVal}</p>`
       )
       .addTo(map);
   }

@@ -228,7 +228,7 @@ function buildLocationList(stores) {
     const popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML(
-        `<h3>${currentFeature.properties.header}</h3><p class="p-2">${popVal}</p>`
+        `<h5>${currentFeature.properties.header}</h5><p class="p-2">${popVal}</p>`
       )
       .addTo(map);
   }

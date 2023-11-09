@@ -159,7 +159,7 @@ function buildLocationList(stores) {
     listing.className = 'item';
     const link = listing.appendChild(document.createElement('a'));
     link.href = 'javascript:void(0)';
-    link.className = 'title fw-bold fs-lg';
+    link.className = 'title';
     link.id = `link-${store.properties.id}`;
     link.innerHTML = `${store.properties.header}`;
 
@@ -217,7 +217,7 @@ function buildLocationList(stores) {
     const popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML(
-        `<h3>${currentFeature.properties.header}</h3><p class="p-2">${popVal}</p>`
+        `<h5>${currentFeature.properties.header}</h5><p class="p-2">${popVal}</p>`
       )
       .addTo(map);
   }

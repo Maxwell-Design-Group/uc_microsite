@@ -85,7 +85,7 @@ const stores = {
         'icon': 'mealExchange',
         'body': 'Quick Eats provides walk-in, walk-out convenience! This AI-driven, no wait, checkout-free retail store offers easy access to a variety of high-quality foods, beverages and essentials at all hours of the day.',
         'concepts': ['Campus Green'],
-        'image': '../images/quick-eats.jpg',
+        'image': '../images/quick-eats.png',
         'modalClass': 'quick-eats'
       }
     }
@@ -202,7 +202,7 @@ function buildLocationList(stores) {
     const popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML(
-        `<h3>${currentFeature.properties.header}</h3><p class="p-2">${popVal}</p>`
+        `<h5>${currentFeature.properties.header}</h5><p class="p-2">${popVal}</p>`
       )
       .addTo(map);
   }

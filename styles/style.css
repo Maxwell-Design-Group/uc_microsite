@@ -159,6 +159,10 @@ h4, h6 {
   line-height: 1;
 }
 
+h5 {
+  font-size: 1.75rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -200,6 +204,7 @@ a {
 .nav-link:hover {
   color: var(--bs-red);
 }
+
 
 /* Footer */
 .footer-bottom {
@@ -321,140 +326,210 @@ a {
 .sidebar {
   position: absolute;
   width: 25%;
-  height: 650px;
+  height: calc(100% - 75px);
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
-  }
+}
    
-  .map {
+.map {
   position: absolute;
   left: 25%;
   width: 75%;
-  height: 650px;
-  }
+  height: calc(100% - 75px);
+}
+     
+/* Mapbox Listings */
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+   
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+   
+.listings .item .title {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+   
+.listings .item .title small {
+  font-weight: 400;
+}
 
-  .heading {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    min-height: 60px;
-    line-height: 60px;
-    padding: 0 10px;
-    background-color: #E00122;
-    color: #fff;
-    }
-     
-    .listings {
-    height: 650px;
-    overflow: auto;
-    padding-bottom: 60px;
-    }
-     
-    .listings .item {
-    display: block;
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    text-decoration: none;
-    }
-     
-    .listings .item:last-child {
-    border-bottom: none;
-    }
-    .listings .item .title {
-    display: block;
-    color: #000000;
-    font-weight: 700;
-    }
-     
-    .listings .item .title small {
-    font-weight: 400;
-    }
-    .listings .item.active .title,
-    .listings .item .title:hover {
-    color: #3d3d3d;
-    }
-    .listings .item.active {
-    background-color: #f8f8f8;
-    }
-    ::-webkit-scrollbar {
-    width: 5px;
-    height: 3px;
-    border-left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    }
-    ::-webkit-scrollbar-track {
-    background: none;
-    }
-    ::-webkit-scrollbar-thumb {
-    background: #E00122;
-    border-radius: 0;
-    }
-     
-    .marker {
-    border: none;
-    cursor: pointer;
-    height: 56px;
-    width: 56px;
-    background-image: url(/images/marker.png);
-    }
-     
-    /* Marker tweaks */
-    .mapboxgl-popup {
-    padding-bottom: 50px;
-    }
-     
-    .mapboxgl-popup-close-button {
-    display: none;
-    }
-    .mapboxgl-popup-content {
-    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
-    padding: 0;
-    width: 250px;
-    }
-    .mapboxgl-popup-content h4 {
-    background: #E00122;
-    color: #fff;
-    margin: 0;
-    padding: 10px;
-    border-radius: 3px 3px 0 0;
-    font-weight: 500;
-    margin-top: -15px;
-    }
-     
-    .mapboxgl-popup-content div {
-    padding: 10px;
-    }
-     
-    .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-    margin-top: 15px;
-    }
-     
-    .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-    border-bottom-color: #E00122;
-    }
+.listings .item.active .title,
+.listings .item .title:hover {
+  color: #E00122;
+}
 
-    .jost {
-      font-family: Jost;
-    }
-  
-    .fw-bold {
-      font-weight: bold;
-    }
-  
-    .gentium {
-      font-family: Gentium;
-    }
-  
-    .fs-lg {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      margin-top: 15px;
-    }
+.listings .item.active {
+  background-color: #f8f8f8;
+}
 
-    .mapboxjawn{
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-      box-sizing: border-box;
-      min-height: 750px;
-      min-width: 100%;
-    }
+/* Mapbox Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #E00122;
+  border-radius: 0;
+}
+/* Mapbox Markers */
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 56px;
+  width: 56px;
+}
+
+.marker-retail {
+  background-image: url(../images/retail.png);
+}
+
+.marker-me {
+  background-image: url(../images/me-icon.png);
+}
+
+.marker-at {
+  background-image: url(../images/at-icon.png);
+}
+     
+/* Mapbox Popup */
+.heading {
+  background: #c6b3b3;
+  border-bottom: 1px solid #eee;
+  min-height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: #E00122;
+  color: #fff;
+}
+
+.mapboxgl-popup {
+  padding-bottom: 50px;
+}
+   
+.mapboxgl-popup-close-button {
+  font-size: 30px;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.mapboxgl-popup-content {
+  font-family: 'Jost', sans-serif;
+  padding: 0;
+  width: 300px;
+}
+
+.mapboxgl-popup-content h5 {
+  background: #E00122;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+    
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+   
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+  
+.fs-lg {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+/* Modal Styles */
+.modal-body {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1024px;
+  width: 100%;
+}
+
+.home-table {
+  background-image: url(../images/home-table-01.jpg);
+}
+.cougar-cafe {
+  background-image: url(../images/justbaked-modal.png);
+}
+.zen-sushi {
+  background-image: url(../images/catskellar-zen.jpg);
+}
+.aatish-halal {
+  background-image: url(../images/aatish-halal.jpg);
+}
+.bearcats-cafe {
+  background-image: url(../images/bearcats-cafe.jpg);
+}
+.varsity-club {
+  background-image: url(../images/varsity-club.jpg);
+}
+.revive-space {
+  background-image: url(../images/revive-space.jpg);
+}
+.otg-01{
+  background-image: url(../images/otg-01.jpg);
+}
+.twisted-taco {
+  background-image: url(../images/twisted-taco.jpg);
+}
+.market-on-main {
+  background-image: url(../images/market-on-main.jpg);
+}
+.daap-cafe {
+  background-image: url(../images/daap-cafe.jpg);
+}
+.home-table-02 {
+  background-image: url(../images/home-table-02.jpg);
+}
+.zimmer-rooftop {
+  background-image: url(../images/zimmer-rooftop.jpg);
+}
+.fan-favorites {
+  background-image: url(../images/fan-favorites.jpg);
+}
+.wtb-a{
+  background-image: url(../images/wtb-a.jpg);
+}
+.wtb-b{
+  background-image: url(../images/wtb-b.jpg);
+}
+.bearcat-patio{
+  background-image: url(../images/bearcat-patio.jpg);
+}
+.bearcat-faves{
+  background-image: url(../images/bearcat-faves.jpg);
+}
+.overlook{
+  background-image: url(../images/overlook.jpg);
+}
+.premium{
+  background-image: url(../images/premium.jpg);
+}
+.quick-eats{
+  background-image: url(../images/quick-eats.png);
+}
+.student-athlete{
+  background-image: url(../images/student-athlete-dining.jpg);
+}
